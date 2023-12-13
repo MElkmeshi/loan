@@ -39,7 +39,7 @@ knn = KNeighborsClassifier(n_neighbors=3)
 rfc = RandomForestClassifier(
     n_estimators=7, criterion='entropy', random_state=7)
 svc = SVC()
-lc = LogisticRegression(solver='lbfgs', max_iter=1000)
+lc = LogisticRegression(solver='lbfgs', max_iter=70000)
 dtc = DecisionTreeClassifier(random_state=7)
 gbc = GradientBoostingClassifier(random_state=7)
 
