@@ -15,7 +15,7 @@ import numpy as np
 
 # Load data
 # Update with the correct file name
-data = pd.read_csv("loan_approval_dataset.csv")
+data = pd.read_csv("datasets/loan_approval_dataset.csv")
 
 # Print column names
 # print("Original Column Names:", data.columns)
