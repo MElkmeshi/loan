@@ -58,40 +58,6 @@ dtc = DecisionTreeClassifier(random_state=7)
 gbc = GradientBoostingClassifier(random_state=7)
 nb = GaussianNB()  
 
-# print('making predictions on the training set')
-# for clf in (rfc, knn, lc, dtc, gbc, nb):  
-#     clf.fit(X_train, Y_train)
-#     Y_pred = clf.predict(X_train)
-
-#     accuracy = accuracy_score(Y_train, Y_pred)
-#     precision = precision_score(Y_train, Y_pred, zero_division=1)
-#     recall = recall_score(Y_train, Y_pred, zero_division=1)
-#     f1 = f1_score(Y_train, Y_pred, zero_division=1)
-
-#     print(f"Metrics for {clf.__class__.__name__} on training set:")
-#     print("Accuracy =", accuracy)
-#     print("Precision =", precision)
-#     print("Recall =", recall)
-#     print("F1-Score =", f1)
-#     print("-------------------------")
-
-# print('making predictions on the testing set')
-# for clf in (rfc, knn, lc, dtc, gbc, nb):  
-#     clf.fit(X_train, Y_train)
-#     Y_pred = clf.predict(X_test)
-
-#     accuracy = accuracy_score(Y_test, Y_pred)
-#     precision = precision_score(Y_test, Y_pred, zero_division=1)
-#     recall = recall_score(Y_test, Y_pred, zero_division=1)
-#     f1 = f1_score(Y_test, Y_pred, zero_division=1)
-
-#     print(f"Metrics for {clf.__class__.__name__} on testing set:")
-#     print("Accuracy =", accuracy)
-#     print("Precision =", precision)
-#     print("Recall =", recall)
-#     print("F1-Score =", f1)
-#     print("-------------------------")
-
 
 
 print('making predictions on the testing set')
