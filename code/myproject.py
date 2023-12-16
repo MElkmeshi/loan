@@ -10,7 +10,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 
 # Load data
-data = pd.read_csv("loan/mytest/train.csv")
+data = pd.read_csv("datasets/train.csv")
 
 # Remove leading and trailing whitespaces from column names
 data.columns = data.columns.str.strip()

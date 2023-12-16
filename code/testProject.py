@@ -9,7 +9,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import GradientBoostingClassifier
 import pandas as pd
 
-data = pd.read_csv("LoanApprovalPrediction.csv")
+data = pd.read_csv("datasets/LoanApprovalPrediction.csv")
 
 obj = (data.dtypes == 'object')
 
