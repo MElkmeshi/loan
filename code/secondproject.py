@@ -13,22 +13,12 @@ from sklearn.naive_bayes import GaussianNB
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Load data
-# Update with the correct file name
 data = pd.read_csv("datasets/loan_approval_dataset.csv")
 
-# Print column names
-# print("Original Column Names:", data.columns)
-
-# Remove leading and trailing whitespaces from column names
 data.columns = data.columns.str.strip()
 
 # Drop unnecessary columns
 data.drop(['loan_id'], axis=1, inplace=True)
-
-# For categorical columns, fill missing values with the most frequent value
-for col in data.select_dtypes(include='object').columns:
-    data[col].fillna(data[col].mode()[0], inplace=True)
 
 
 # Encode categorical variables
@@ -103,29 +93,24 @@ for clf in (rfc, knn, nb, lc, dtc, gbc):
     recall_values.append(recall_test)
     f1_values.append(f1_test)
 
-# Plotting with a horizontal bar chart
+
 width = 0.2
 ind = np.arange(len(algorithms))
 
 fig, ax = plt.subplots(figsize=(12, 6))
 
-# Plot Accuracy
 rects_acc_test = ax.bar(ind, accuracy_values, width,
                         label='Accuracy', color='skyblue', edgecolor='black', hatch='//')
 
-# Plot Precision
 rects_prec_test = ax.bar(ind + width, precision_values,
                          width, label='Precision', color='lightcoral', edgecolor='black', hatch='//')
 
-# Plot Recall
 rects_recall_test = ax.bar(
     ind + 2 * width, recall_values, width, label='Recall', color='lightgrey', edgecolor='black', hatch='//')
 
-# Plot F1-Score
 rects_f1_test = ax.bar(ind + 3 * width, f1_values, width,
                        label='F1-Score', color='gold', edgecolor='black', hatch='//')
 
-# Add labels, title, and legend
 ax.set_xticks(ind + 1.5 * width)
 ax.set_xticklabels(algorithms)
 ax.set_ylabel('Metrics')
@@ -134,3 +119,4 @@ ax.legend()
 
 # Display the bar chart
 plt.show()
+
