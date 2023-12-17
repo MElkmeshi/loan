@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 from sklearn.linear_model import LogisticRegression
-from sklearn.naive_bayes import MultinomialNB
+from sklearn.naive_bayes import GaussianNB
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
@@ -35,7 +35,7 @@ rfc = RandomForestClassifier(n_estimators=7,
 lc = LogisticRegression(solver='lbfgs', max_iter=1000)
 dtc = DecisionTreeClassifier(random_state=7)
 gbc = GradientBoostingClassifier(random_state=7)
-nb = MultinomialNB()
+nb = GaussianNB()
 
 algoName = {
     rfc: "Random Forest",
