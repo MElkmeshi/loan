@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Load data
-data = pd.read_csv("datasets/train.csv")
+data = pd.read_csv("datasets/Loan_Approval.csv")
 
 # Remove leading and trailing whitespaces from column names
 data.columns = data.columns.str.strip()
